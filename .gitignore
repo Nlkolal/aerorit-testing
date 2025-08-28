@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# VS Code
+.vscode/
+
+# Data & large files (keep big datasets out of GitHub)
+data/
+*.tif
+*.tiff
+*.hdr
+*.img
+*.npy
+*.npz
+*.mat
+
+# Models / checkpoints
+savedmodels/
+checkpoints/
+*.h5
+*.pt
+*.pth
+
+# OS cruft
+.DS_Store
+Thumbs.db

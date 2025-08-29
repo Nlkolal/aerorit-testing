@@ -9,6 +9,14 @@ env/
 # VS Code
 .vscode/
 
+# === Build / packaging artifacts (ignore these) ===
+# created by `pip install -e .` / setuptools
+*.egg-info/
+*.eggs/
+dist/
+build/
+pip-wheel-metadata/
+
 # Data & large files (keep big datasets out of GitHub)
 data/
 *.tif

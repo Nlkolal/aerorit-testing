@@ -1,0 +1,2 @@
+1. Diffrent combiantion of wavelenghts is best for seeing diffrent things
+2. The edges are not hard defined, when testing the classification 

@@ -1,4 +1,5 @@
-#cd "C:\Users\Nikolai A\Documents\Thesis"; git add -A; git commit -m "MESSAGE"; git pull --rebase origin main; git push origin main
+#git add -A
+#git commit -m "Message" && git push
 
 
 from pathlib import Path
@@ -25,9 +26,17 @@ print("Palette    :", None if palette is None or palette.size == 0 else palette.
 # ---- Plot RGB from the hyperspectral cube ----
 # Natural-ish color (R,G,B ~ 650,550,450 nm)
 rgb_from_cube = make_rgb_from_cube(refl, (650, 550, 450))
-show_img(rgb_from_cube, "AeroRIT RGB (650/550/450 nm)", downsample=3)
+show_img(rgb_from_cube, "AeroRIT RGB (650/550/450 nm)", downsample=1)
 
-# (Optional) False color: NIR/Red/Green (NIR highlights vegetation)
-false_color = make_rgb_from_cube(refl, (800, 650, 550))
-show_img(false_color, "AeroRIT False Color (800/650/550 nm)", downsample=3)
+# False color: highlights vegetation)
+#false_color = make_rgb_from_cube(refl, (800, 650, 550))
+#show_img(false_color, "AeroRIT False Color (800/650/550 nm)", downsample=1)
+
+# False color: highlights Urban contrast)
+#false_color = make_rgb_from_cube(refl, (870, 600, 500))
+#show_img(false_color, "AeroRIT False Color (870/600/500 nm)", downsample=1)
+
+# False color: highlights Water)
+#false_color = make_rgb_from_cube(refl, (860, 880, 870))
+#show_img(false_color, "AeroRIT False Color (860/880/870 nm)", downsample=1)
 

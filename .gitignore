@@ -18,7 +18,7 @@ build/
 pip-wheel-metadata/
 
 # Data & large files (keep big datasets out of GitHub)
-data/
+/data/
 *.tif
 *.tiff
 *.hdr

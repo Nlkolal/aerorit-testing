@@ -1,6 +1,6 @@
 from pathlib import Path
 import numpy as np
-from hsi.data.aerorit import load_aerorit
+from hsi.data.aerorit import load_aerorit, ID_TO_NAME
 from hsi.viz import plot_spectrum, plot_spectra, spectra_heatmap
 
 # <<< EDIT THESE >>>
@@ -73,7 +73,7 @@ def run(root=ROOT, mode=MODE, out=OUT):
     else:
         plot_spectra(
             refl, coords, mode=mode, y_range=(Y_MIN, Y_MAX),
-            title=f"{len(coords)} spectra cars",
+            title=f"{len(coords)} spectra {ID_TO_NAME[SELECT_BY_ID]}",
             save_path=(str(out) if out else None),
         )
         if HEATMAP:
@@ -86,7 +86,7 @@ def run(root=ROOT, mode=MODE, out=OUT):
                 refl, coords, mode=mode,
                 reflect_range=(Y_MIN, Y_MAX),          
                 bins_reflect=80,
-                title="Aggregated spectral density cars",
+                title= f"Aggregated spectral density {ID_TO_NAME[SELECT_BY_ID]}",
                 save_path=(str(save) if save else None),
             )
 
